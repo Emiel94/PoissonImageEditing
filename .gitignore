@@ -34,3 +34,9 @@ desktop.ini
 *.exe
 *.out
 *.app
+
+# Folders
+out/
+build/
+3rdparty/
+.vs/

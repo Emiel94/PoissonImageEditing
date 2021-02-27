@@ -1,15 +1,20 @@
 #include <iostream>
-
+#include <iostream>
+#include <filesystem>
 #include "PoissonImage.h"
+namespace fs = std::filesystem;
+
 
 int main(int argc, char* argv[])
 {
+
     if(argc < 4){
         std::cout << "Compulsory arguments are missing ..." << std::endl;
         std::cout << "Usage: PoissonImageEditor <source-path> <destination-path> <output-path> \n"
                   << "[ <mask-path> [ <x-offset> <y-offset> [ <-r|-a|-m> [ <-b|-f|-c> <-b|-f|-c> ] ] ] ]"
                   << std::endl
                   ;
+        std::cout << "Current path is " << fs::current_path() << '\n';
         return 0;
     }
 

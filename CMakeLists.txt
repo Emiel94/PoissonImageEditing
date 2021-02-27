@@ -51,7 +51,13 @@ if(NOT EIGEN3_FOUND)
 endif()
 
 # OpenCV
-find_package(OpenCV QUIET)
+set( OpenCV_DIR )
+if( NOT CMAKE_CL_64 )
+  set( OpenCV_DIR "C:/users/Emiel/Develop/vcpkg/installed/x86-windows/share/opencv" )
+else()
+  set( OpenCV_DIR "C:/users/Emiel/Develop/vcpkg/installed/x64-windows/share/opencv" )
+endif()
+find_package(OpenCV)
 if(NOT OpenCV_FOUND)
 	set(OpenCV_INCLUDE_DIRS "${3RDPARTY_LIBRARY_DIR}/opencv/include")
 	set(OpenCV_LIBRARY_DIR "${3RDPARTY_LIBRARY_DIR}/opencv/lib")
@@ -64,6 +70,8 @@ endif()
 if(NOT OpenCV_FOUND)
 	message(FATAL_ERROR "Failed to find OpenCV.")
 endif()
+
+
 
 set(3RDPARTY_INCLUDE_DIRS
     ${EIGEN3_INCLUDE_DIRS}
