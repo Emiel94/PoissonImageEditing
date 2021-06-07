@@ -3,7 +3,7 @@ add_library(POISSON_IMAGE_SHARED
 	SHARED
     PoissonImage.cpp
     PoissonImageImpl.cpp
-)
+ "cnc_spare_matrix.cpp")
 
 set_target_properties(POISSON_IMAGE_SHARED PROPERTIES OUTPUT_NAME PoissonImage)
 set_target_properties(POISSON_IMAGE_SHARED PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR})
@@ -19,7 +19,7 @@ add_library(POISSON_IMAGE_STATIC
 	STATIC
     PoissonImage.cpp
     PoissonImageImpl.cpp
-)
+ "cnc_spare_matrix.cpp")
 
 set_target_properties(POISSON_IMAGE_STATIC PROPERTIES OUTPUT_NAME PoissonImage)
 set_target_properties(POISSON_IMAGE_STATIC PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR})

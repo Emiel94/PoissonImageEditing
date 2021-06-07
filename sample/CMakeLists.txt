@@ -2,6 +2,7 @@
 add_executable(POISSON_IMAGE_EXE
     main.cpp
 )
+target_compile_features(POISSON_IMAGE_EXE PUBLIC cxx_std_20)
 
 set_target_properties(POISSON_IMAGE_EXE PROPERTIES OUTPUT_NAME PoissonImageEditor)
 set_target_properties(POISSON_IMAGE_EXE PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR})

@@ -197,9 +197,19 @@ void PoissonImageImpl::poissonSolver(Eigen::MatrixXf& R, bool wholeSpace) const
     solver.analyzePattern(A);
     solver.factorize(A);
     R = solver.solve(b);
+
+    std::cout << "Here is the matrix m:\n" << R << std::endl;
+
     if(wholeSpace){
         R = m_dstImage - M * m_dstImage + ST * R;
     }
+}
+
+// TODO: CNC Sparse Matrix implementation
+// TODO: solver with CNC
+void PoissonImageImpl::poissonSolverCNC(Eigen::MatrixXf& R, bool wholeSpace) const {
+    
+
 }
 
 

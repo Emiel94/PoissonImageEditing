@@ -54,6 +54,8 @@ protected:
 
     void poissonSolver(Eigen::MatrixXf& R, bool wholeSpace = false) const;
 
+    void poissonSolverCNC(Eigen::MatrixXf& R, bool wholeSpace) const;
+
     PoissonImageImpl(PoissonImage::GradientScheme gradientSchm = PoissonImage::Maximum, PoissonImage::DiffOp gradientOp = PoissonImage::Backward, PoissonImage::DiffOp divOp = PoissonImage::Forward);
     virtual ~PoissonImageImpl() { return; }
 
